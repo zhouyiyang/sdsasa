@@ -1,0 +1,25 @@
+打开git bash here
+输入：
+git config --global user.name '(这里输入用户名)'+回车之下都是
+
+git config --global user.email'(这里输入邮箱号)'
+二、检查是否配置过（第一次配置可以用来检查是否成功）
+cd ~/.ssh^C
+三、建立秘钥
+打开git bash here
+输入：Ssh-keygen-t rsa -C '(这里输入邮箱名)'
+点击三次 回车 （3次）
+去c盘 找到.ssh>-id_rsa.pub 文件 打开后复制文本信息，登录github网站，setting>-SSH and GPG key>-new ssh key输入titile（随意输）文本框粘贴pub中复制的文件，确认，出现钥匙表示成功。
+四、上传
+打开git bash here
+建立桌面或者其他盘一个新的文件夹，放入所要上传的文件。
+输入：
+cd 文件夹名（英文的）
+git init(将此文件夹设置为上传的码头)
+git add *(把所有文件添加到码头)
+git status（查看状态，会看到添加过的文件名）
+在github上新创建一个仓库，下方信息输入到git bash here中
+输入：
+git commit -m“”（名字可是中文，作为上传文件的说明分类）
+git remote add origin https://github.com/yellowHLJ/liuwan.git
+git push origin master(这一行输入的是通用的不加密的，原文段-u是分枝信息)之后等待输入账号密码就好了
